@@ -1,4 +1,4 @@
-import 'package:new_flutter/app/sign_in/sign_in_page.dart';
+import 'package:new_flutter/app/sign_in/landing_page.dart';
 import 'package:flutter/material.dart';
  void main()
  {
@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
          primarySwatch: Colors.green,
            secondaryHeaderColor:Colors.purple,
        ),
-       home:SignInPage(),
+       home:LandingPage(),
      );
    }
  }
