@@ -12,7 +12,7 @@ class  LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
    User? _user;
-  void _updateUser(User user) {
+   void _updateUser(User user) {
     setState(() {
       _user = user;
     });
@@ -23,7 +23,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     // ignore: unnecessary_null_comparison
-    if (_user==null) {
+    if (_user == null) {
       return SignInPage(
         onSignIn: _updateUser,
       );
