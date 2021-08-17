@@ -11,8 +11,8 @@ class  LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
-   User? _user;
-   void _updateUser(User user) {
+   FirebaseUser _user;
+   void _updateUser(FirebaseUser user) {
     setState(() {
       _user = user;
     });

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomRaisedButton extends StatelessWidget {
   CustomRaisedButton({
-    required this.child,
-    required this.color,
+     this.child,
+     this.color,
     this.borderRadius: 2.0,
     this.height: 50,
-    required this.onPressed,
+     this.onPressed,
   });
   final Widget child;
   final Color color;
