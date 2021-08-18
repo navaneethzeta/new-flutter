@@ -1,6 +1,7 @@
 import 'package:new_flutter/app/sign_in/landing_page.dart';
 
 import 'package:flutter/material.dart';
+import 'package:new_flutter/services.dart/auth.dart';
  void main()
  {
    runApp(MyApp());
@@ -16,7 +17,9 @@ import 'package:flutter/material.dart';
          primarySwatch: Colors.green,
            secondaryHeaderColor:Colors.purple,
        ),
-       home:LandingPage(),
+       home:LandingPage(
+         auth: Auth(),
+       ),
      );
    }
  }
