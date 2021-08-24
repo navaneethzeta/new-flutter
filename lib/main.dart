@@ -12,6 +12,7 @@ import 'package:new_flutter/services.dart/auth.dart';
    @override
    Widget build(BuildContext context) {
      return MaterialApp(
+       debugShowCheckedModeBanner: false,
        title: 'TIME 🐒TRACKER🕐🕑🕒',
        theme: ThemeData(
          primarySwatch: Colors.green,

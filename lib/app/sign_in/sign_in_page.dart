@@ -11,13 +11,31 @@ class SignInPage extends StatelessWidget {
   SignInPage({@required this.auth});
   final AuthBase auth;
   Future<void> _signInAnonymously() async {
-    //await Firebase.initializeApp();
+
    try{
   
     await auth.signInAnonymously();
    }catch (e) {
     print(e.toString());
    }
+  }
+  Future<void> _signInWithGoogle() async {
+
+    try{
+
+      await auth.signInWithGoogle();
+    }catch (e) {
+      print(e.toString());
+    }
+  }
+  Future<void> _signInWithFacebook() async {
+
+    try{
+
+      await auth.signInWithFacebook();
+    }catch (e) {
+      print(e.toString());
+    }
   }
   @override
   Widget build(BuildContext context) {
@@ -52,7 +70,7 @@ class SignInPage extends StatelessWidget {
             text: 'Sign In With Google',
             textColor: Colors.black87,
             color: Colors.white,
-            onPressed: () {},
+            onPressed: _signInWithGoogle,
           ),
           SizedBox(height: 8.0),
           SocialSignInButton(
@@ -60,7 +78,7 @@ class SignInPage extends StatelessWidget {
             text: 'Sign In With Facebook',
             textColor: Colors.white,
             color: Color(0xFF334D92),
-            onPressed: () {},
+            onPressed: _signInWithFacebook,
           ),
           SizedBox(height: 8.0),
           SignInButton(
