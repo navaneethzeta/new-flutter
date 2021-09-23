@@ -2,6 +2,8 @@ import 'package:new_flutter/app/sign_in/landing_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:new_flutter/services.dart/auth.dart';
+import 'package:new_flutter/services.dart/auth_provider.dart';
+import 'package:provider/provider.dart';
  void main()
  {
    runApp(MyApp());
@@ -11,15 +13,19 @@ import 'package:new_flutter/services.dart/auth.dart';
 
    @override
    Widget build(BuildContext context) {
-     return MaterialApp(
-       debugShowCheckedModeBanner: false,
-       title: 'TIME 🐒TRACKER🕐🕑🕒',
-       theme: ThemeData(
-         primarySwatch: Colors.green,
-           secondaryHeaderColor:Colors.purple,
-       ),
-       home:LandingPage(
-         auth: Auth(),
+     return Provider<AuthBase>(
+       builder:(context)=>Auth(),
+
+       child: MaterialApp(
+         debugShowCheckedModeBanner: false,
+         title: 'TIME 🐒TRACKER🕐🕑🕒',
+         theme: ThemeData(
+           primarySwatch: Colors.green,
+             secondaryHeaderColor:Colors.purple,
+         ),
+         home:LandingPage(
+          
+         ),
        ),
      );
    }
