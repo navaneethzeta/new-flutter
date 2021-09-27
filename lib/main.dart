@@ -2,7 +2,7 @@ import 'package:new_flutter/app/sign_in/landing_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:new_flutter/services.dart/auth.dart';
-import 'package:new_flutter/services.dart/auth_provider.dart';
+
 import 'package:provider/provider.dart';
  void main()
  {
@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
    @override
    Widget build(BuildContext context) {
      return Provider<AuthBase>(
-       builder:(context)=>Auth(),
+       create:(context)=>Auth(),
 
        child: MaterialApp(
          debugShowCheckedModeBanner: false,

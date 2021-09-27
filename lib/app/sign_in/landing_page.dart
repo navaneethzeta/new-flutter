@@ -4,13 +4,14 @@ import 'package:new_flutter/app/sign_in/home_page.dart';
 
 import 'package:new_flutter/app/sign_in/sign_in_page.dart';
 import 'package:new_flutter/services.dart/auth.dart';
-import 'package:new_flutter/services.dart/auth_provider.dart';
+import 'package:provider/provider.dart';
+
 class  LandingPage extends StatelessWidget {
   
   
   @override
   Widget build(BuildContext context) {
-    final auth=AuthProvider .of(context);
+    final auth=Provider.of<AuthBase>(context, listen: false);
     return StreamBuilder<User>(
       stream: auth.onAuthStateChanged,
       builder: (context, snapshot){
